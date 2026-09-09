@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Congreso </title>
+    <link rel="stylesheet" href="estilos.css">
+    
+</head>
+<body>
+    <div class="container">
+    <h2>Registro de Estudiantes</h2>
+    <form id="registroForm">
+      
+      <div class="form-group">
+        <label for="nombre">Nombre Completo:</label>
+        <input type="text" id="nombre" name="nombre" required placeholder="Ej. Juan Pérez García">
+      </div>
+
+      <div class="form-group">
+        <label for="matricula">Matrícula:</label>
+        <input type="text" id="matricula" name="matricula" required placeholder="Ej. 202312345">
+      </div>
+
+      <div class="form-group">
+        <label for="correo">Correo Electrónico:</label>
+        <input type="email" id="correo" name="correo" required placeholder="correo@ejemplo.com">
+      </div>
+
+      <div class="form-group">
+        <label for="facultad">Facultad:</label>
+        <select id="facultad" name="facultad" required>
+          <option value="">-- Selecciona una facultad --</option>
+          <option value="Economía">Economía</option>
+          <option value="UACYA">UACYA</option>
+          <option value="Turismo y Gastronomía">Turismo y Gastronomía</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="carrera">Carrera / Licenciatura:</label>
+        <select id="carrera" name="carrera" required disabled>
+          <option value="">-- Primero selecciona una facultad --</option>
+        </select>
+      </div>
+
+      <button type="submit" id="btnSubmit">Enviar Registro</button>
+      <div id="statusMessage"></div>
+    </form>
+  </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
