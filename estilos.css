@@ -31,7 +31,6 @@
       margin: 0 auto 20px;   /* Centra la imagen horizontalmente y añade un margen inferior */
       object-fit: contain;   /* Ajusta la imagen limpiamente si el contenedor cambia */
     }
-
     .container {
       background-color: var(--card-bg);
       padding: 30px;
