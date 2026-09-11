@@ -23,6 +23,14 @@
       min-height: 100vh;
       padding: 20px;
     }
+    /* Estilos para el logo del formulario */
+    .logo {
+      display: block;
+      max-width: 100%;       /* Evita que la imagen sea más ancha que el contenedor */
+      height: auto;          /* Mantiene la proporción de aspecto original */
+      margin: 0 auto 20px;   /* Centra la imagen horizontalmente y añade un margen inferior */
+      object-fit: contain;   /* Ajusta la imagen limpiamente si el contenedor cambia */
+    }
 
     .container {
       background-color: var(--card-bg);

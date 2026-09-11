@@ -1,30 +1,68 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Congreso </title>
-    <link rel="stylesheet" href="estilos.css">
-    
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Congreso</title>
+  <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
-    <div class="container">
-    <h2>Registro de Estudiantes</h2>
+  <div class="container">
+    <img src="https://th.bing.com/th/id/OIP.JK3i0E2rzysKz3YOXnkdAAHaCB?r=0&o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Logo del Congreso" class="logo">
+    
+    <h2>Registro Congreso Del Área de Ciencias Económicas y Administrativas</h2>
+    
     <form id="registroForm">
       
       <div class="form-group">
-        <label for="nombre">Nombre Completo:</label>
-        <input type="text" id="nombre" name="nombre" required placeholder="Ej. Juan Pérez García">
+        <label for="nombre">Nombre(s)</label>
+        <input type="text" id="nombre" name="nombre" required placeholder="Ej. Daniel Alberto">
       </div>
 
       <div class="form-group">
-        <label for="matricula">Matrícula:</label>
-        <input type="text" id="matricula" name="matricula" required placeholder="Ej. 202312345">
+        <label for="apellidos">Apellido(s)</label>
+        <input type="text" id="apellidos" name="apellidos" required placeholder="Ej. Pérez García">
+      </div>
+
+      <!-- Tipo de Participante -->
+      <div class="form-group">
+        <label for="tipoParticipante">Tipo de Participante</label>
+        <select id="tipoParticipante" name="tipoParticipante" required>
+          <option value="">-- Selecciona una opción --</option>
+          <option value="Alumno">Alumno</option>
+          <option value="Docente">Docente</option>
+        </select>
+      </div>
+
+      <!-- Rol en el Evento -->
+      <div class="form-group">
+        <label for="rol">Rol en el Evento</label>
+        <select id="rol" name="rol" required>
+          <option value="">-- Selecciona su rol --</option>
+          <option value="Asistente">Asistente</option>
+          <option value="Ponente">Ponente</option>
+        </select>
+      </div>
+
+
+      <div class="form-group">
+        <label for="matricula">Matrícula o Número de Trabajador</label>
+        <input type="text" id="matricula" name="matricula" required placeholder="Ej. 20232345">
       </div>
 
       <div class="form-group">
-        <label for="correo">Correo Electrónico:</label>
+        <label for="correo">Correo Electrónico</label>
         <input type="email" id="correo" name="correo" required placeholder="correo@ejemplo.com">
+      </div>
+
+      <div class="form-group">
+        <label for="genero">Género</label>
+        <select id="genero" name="genero" required>
+          <option value="">-- Selecciona un género --</option>
+          <option value="Masculino">Masculino</option>
+          <option value="Femenino">Femenino</option>
+          <option value="Otro">Prefiero no decirlo</option>
+        </select>
       </div>
 
       <div class="form-group">
@@ -44,12 +82,31 @@
         </select>
       </div>
 
+      <div class="form-group">
+        <label for="modalidad">Modalidad de la carrera</label>
+        <select id="modalidad" name="modalidad" required>
+          <option value="">-- Selecciona una modalidad --</option>
+          <option value="Escolarizado">Escolarizado</option>
+          <option value="Semiescolarizado">Semiescolarizado</option>
+          <option value="En línea">En línea</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="conferencia">Selecciona la Conferencia/Taller</label>
+        <select id="conferencia" name="conferencia" required>
+          <option value="">-- Selecciona una conferencia/taller --</option>
+          <option value="INAUGURACION">Inauguración del Congreso</option>
+          <option value="DECISIONES CON ATAJOS COGNITIVOS">Conferencia Magistral "Decisión con Atajos Cognitivos: sin responsabilidad no hay paraíso"</option>
+          <option value="Taller 1">Taller 1: Desarrollo Profesional</option>
+        </select>
+      </div>
+
       <button type="submit" id="btnSubmit">Enviar Registro</button>
       <div id="statusMessage"></div>
     </form>
   </div>
 
-
-    <script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
