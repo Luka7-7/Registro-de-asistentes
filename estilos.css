@@ -1,105 +1,177 @@
 :root {
-      --primary-color: #003366;
-      --secondary-color: #0056b3;
-      --bg-color: #f4f7f6;
-      --card-bg: #ffffff;
-      --text-color: #333333;
-      --border-color: #cccccc;
-    }
+  --primary-color: #0d47a1;        
+  --secondary-color: #1976d2;     
+  --accent-color: #0288d1;        
+  --bg-color: #eef2f6;        
+  --card-bg: #ffffff;           
+  --text-main: #1e293b;            
+  --text-muted: #475569;          
+  --border-color: #cbd5e1;         
+  --border-focus: #2563eb;         
+  --shadow-color: rgba(15, 23, 42, 0.08); 
+  --radius-lg: 12px;
+  --radius-md: 8px;
+}
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
 
-    body {
-      background-color: var(--bg-color);
-      color: var(--text-color);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      padding: 20px;
-    }
-    .logo {
-      display: block;
-      max-width: 100%;       
-      height: auto;          
-      margin: 0 auto 20px;   
-      object-fit: contain;   
-    }
-    .container {
-      background-color: var(--card-bg);
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-      width: 100%;
-      max-width: 500px;
-    }
+body {
+  background: linear-gradient(135deg, #f0f4f8 0%, #e2e8f0 100%);
+  color: var(--text-main);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 24px 16px;
+  -webkit-font-smoothing: antialiased;
+}
 
-    h2 {
-      text-align: center;
-      color: var(--primary-color);
-      margin-bottom: 25px;
-    }
+/* Contenedor tipo tarjeta flotante */
+.container {
+  background-color: var(--card-bg);
+  padding: 36px 30px;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 10px 25px -5px var(--shadow-color), 0 8px 10px -6px var(--shadow-color);
+  width: 100%;
+  max-width: 540px;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
 
-    .form-group {
-      margin-bottom: 18px;
-    }
+/* Logo responsivo */
+.logo {
+  display: block;
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  margin: 0 auto 20px;
+  object-fit: contain;
+}
 
-    label {
-      display: block;
-      margin-bottom: 6px;
-      font-weight: 600;
-      color: #555555;
-    }
+/* Encabezado */
+h2 {
+  text-align: center;
+  color: var(--primary-color);
+  font-size: 1.35rem;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 28px;
+  letter-spacing: -0.02em;
+  border-bottom: 2px solid #e2e8f0;
+  padding-bottom: 12px;
+}
 
-    input[type="text"],
-    input[type="email"],
-    select {
-      width: 100%;
-      padding: 10px 12px;
-      border: 1px solid var(--border-color);
-      border-radius: 5px;
-      font-size: 14px;
-      transition: border-color 0.3s ease;
-    }
+/* Grupos del formulario */
+.form-group {
+  margin-bottom: 20px;
+}
 
-    input[type="text"]:focus,
-    input[type="email"]:focus,
-    select:focus {
-      outline: none;
-      border-color: var(--secondary-color);
-    }
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  letter-spacing: 0.01em;
+}
 
-    select:disabled {
-      background-color: #e9ecef;
-      cursor: not-allowed;
-    }
+/* Inputs y Selects estilizados */
+input[type="text"],
+input[type="email"],
+select {
+  width: 100%;
+  padding: 11px 14px;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  font-size: 0.95rem;
+  color: var(--text-main);
+  background-color: #f8fafc;
+  transition: all 0.2s ease-in-out;
+  appearance: none; /* Limpia estilos por defecto del navegador */
+}
 
-    button {
-      width: 100%;
-      padding: 12px;
-      background-color: var(--primary-color);
-      color: white;
-      border: none;
-      border-radius: 5px;
-      font-size: 16px;
-      font-weight: bold;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-      margin-top: 10px;
-    }
+/* Flecha personalizada para los menús desplegables (select) */
+select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%3C475569' width='18' height='18'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  padding-right: 36px;
+}
 
-    button:hover {
-      background-color: var(--secondary-color);
-    }
+/* Interacción Focus */
+input[type="text"]:focus,
+input[type="email"]:focus,
+select:focus {
+  outline: none;
+  border-color: var(--border-focus);
+  background-color: #ffffff;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
 
-    #statusMessage {
-      margin-top: 15px;
-      text-align: center;
-      font-size: 14px;
-      font-weight: 600;
-    }
+/* Estado deshabilitado para el select de carrera */
+select:disabled {
+  background-color: #f1f5f9;
+  color: #94a3b8;
+  border-color: #e2e8f0;
+  cursor: not-allowed;
+  background-image: none;
+}
+
+/* Botón de envío */
+button {
+  width: 100%;
+  padding: 13px;
+  background: linear-gradient(180deg, var(--secondary-color) 0%, var(--primary-color) 100%);
+  color: #ffffff;
+  border: none;
+  border-radius: var(--radius-md);
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(25, 118, 210, 0.25);
+  transition: all 0.2s ease;
+  margin-top: 10px;
+}
+
+button:hover {
+  background: linear-gradient(180deg, #1d4ed8 0%, #1e40af 100%);
+  box-shadow: 0 6px 16px rgba(25, 118, 210, 0.35);
+  transform: translateY(-1px);
+}
+
+button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(25, 118, 210, 0.2);
+}
+
+/* Contenedor de mensajes de estado */
+#statusMessage {
+  margin-top: 16px;
+  padding: 10px;
+  border-radius: var(--radius-md);
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+/* Ajuste fino para móviles */
+@media (max-width: 480px) {
+  .container {
+    padding: 24px 18px;
+  }
+
+  .logo {
+    max-width: 220px;
+  }
+
+  h2 {
+    font-size: 1.15rem;
+  }
+}
