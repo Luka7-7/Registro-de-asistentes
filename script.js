@@ -9,7 +9,8 @@ const carrerasPorFacultad = {
   ],
   "Turismo y Gastronomía": [
     "Gestión e Innovación del Turismo",
-    "Gastronomía"
+    "Gastronomía",
+    "Turismo"
   ],
   "Economía": [
     "Sistemas Computacionales",
